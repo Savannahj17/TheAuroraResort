@@ -22,6 +22,6 @@ namespace TheAuroraResort.Data
 
         public bool IsMember { get; set; }
 
-        public int MyProperty { get; set; }
+        public int HotelId { get; set; }
     }
 }
