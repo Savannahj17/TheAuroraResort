@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +14,15 @@ namespace TheAuroraResort.Data
 
         public enum TypeOfDining { Formal, Casual, Buffet }
         public bool ReservationRequired { get; }
+        public IList<string> Reservation { get; set; }
+
+        [Display(Name = "Hotel")]
         public int HotelId { get; set; }
-        public IList<string> reservation { get; set; }
+
+        [ForeignKey("HotelId")]
+        public virtual Hotel Hotel { get; set; }
 
     }
+
+}
 }

@@ -5,17 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheAuroraResort.Data
+namespace TheAuroraResort.Models
 {
-    public class Reservation
+    public class ReservationListItem
     {
-        [Key]
+        [Display(Name="Created")]
+        public DateTimeOffset CreatedUtc { get; set; }
         public int ReservationId { get; set; }
-        public enum ReservationTime {  }
-        public virtual int UserId { get; set; }
-        public virtual int RestaurantId { get; set; }
+        public DateTimeOffset ReservationDate { get;}
         public int ActivityId { get; set; }
-        public int PartySize { get; set; }
-
+        public string ActivityName { get; set; }
     }
 }
