@@ -15,6 +15,9 @@ namespace TheAuroraResort.Services
             _userId = userId;
         }
 
+        public bool CreateReservation(ReservationCreate model)
+        {
 
+        }
     }
 }
