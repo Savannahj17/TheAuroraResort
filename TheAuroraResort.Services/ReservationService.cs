@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheAuroraResort.Data;
+using TheAuroraResort.Models;
 
 namespace TheAuroraResort.Services
 {
@@ -17,7 +19,17 @@ namespace TheAuroraResort.Services
 
         public bool CreateReservation(ReservationCreate model)
         {
-
+            var entity =
+                new Reservation()
+                {
+                    UserId = _userId;
+                    UserEmail = model.UserEmail;
+                };
+            using (var ctx = new ApplicationDbContext())
+                {
+                    ctx.Reservation.Add(entity);
+                    return ctx.SaveChanges() == 1;
+                }
         }
     }
 }

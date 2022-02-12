@@ -13,6 +13,7 @@ namespace TheAuroraResort.Data
         public int ReservationId { get; set; }
         public enum ReservationTime {  }
         public virtual int UserId { get; set; }
+        public string UserEmail { get; set; }
         public virtual int RestaurantId { get; set; }
         public int ActivityId { get; set; }
         public int PartySize { get; set; }
