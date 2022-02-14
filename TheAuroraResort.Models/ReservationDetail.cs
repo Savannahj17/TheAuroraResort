@@ -7,12 +7,18 @@ using System.Threading.Tasks;
 
 namespace TheAuroraResort.Models
 {
-    public class ReservationListItem
+    public class ReservationDetail
     {
-        [Display(Name="Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
         public int ReservationId { get; set; }
-        public DateTimeOffset ReservationDate { get; set; }
+
         public int PartySize { get; set; }
+
+
+
+        [Display(Name = "Created")]
+        public DateTimeOffset CreatedUtc { get; set; }
+
+        [Display(Name = "Modified")]
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

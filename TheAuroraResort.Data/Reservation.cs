@@ -23,11 +23,16 @@ namespace TheAuroraResort.Data
 
         [Required]
         public string UserEmail { get; set; }
+        public DateTimeOffset ReservationDate { get; set; }
         public virtual int RestaurantId { get; set; }
         public int ActivityId { get; set; }
 
         [Required]
         public int PartySize { get; set; }
+
+        public DateTimeOffset CreatedUtc { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; }
 
     }
 }

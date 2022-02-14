@@ -35,7 +35,7 @@ namespace TheAuroraResort.Services
             }
         }
 
-        public IEnuemerable<ReservationListItem> GetReservations()
+        public IEnumerable<ReservationListItem> GetReservations()
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -48,9 +48,45 @@ namespace TheAuroraResort.Services
                         new ReservationListItem
                         {
                             ReservationId = e.ReservationId,
-                            
+                            CreatedUtc = e.CreatedUtc,
+                            PartySize = e.PartySize,
+                            ReservationDate = e.ReservationDate
                         }
                    );
+                return query.ToArray();
+            }
+        }
+
+        public ReservationDetail GetReservationById(int ReservationId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Reservations
+                        .Single(e => e.ReservationId == ReservationId && e.UserId == _userId);
+                return
+                    new ReservationDetail
+                    {
+                        ReservationId = entity.ReservationId,
+                        PartySize = entity.PartySize,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
+            }
+        }
+
+        public bool DeleteReservation(int ReservationId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Reservations
+                    .Single(e => e.ReservationId == ReservationId && e.UserId == _userId);
+
+                ctx.Reservations.Remove(entity);
+                return ctx.SaveChanges() == 1;
             }
         }
     }
