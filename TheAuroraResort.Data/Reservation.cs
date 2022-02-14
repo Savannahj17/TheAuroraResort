@@ -14,8 +14,10 @@ namespace TheAuroraResort.Data
 
         public enum ReservationTime { Morning = 1, Afternon, Evening, Night }
 
+        public Guid UserId { get; set; }
+
         [Required]
-        public virtual int UserId { get; set; }
+        public virtual int ProfileId { get;  set; }
 
         [Required]
         public string UserEmail { get; set; }

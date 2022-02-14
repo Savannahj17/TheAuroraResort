@@ -22,14 +22,19 @@ namespace TheAuroraResort.Services
             var entity =
                 new Reservation()
                 {
-                    UserId = _userId;
-                    UserEmail = model.UserEmail;
+                    UserId = _userId,
+                    UserEmail = model.UserEmail,
+                    PartySize = model.PartySize
+
                 };
+
             using (var ctx = new ApplicationDbContext())
-                {
-                    ctx.Reservation.Add(entity);
-                    return ctx.SaveChanges() == 1;
-                }
+            {
+                ctx.Reservations.Add(entity);
+                return ctx.SaveChanges() == 1;
+            }
         }
+
+
     }
 }
