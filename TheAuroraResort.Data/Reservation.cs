@@ -11,11 +11,18 @@ namespace TheAuroraResort.Data
     {
         [Key]
         public int ReservationId { get; set; }
-        public enum ReservationTime {  }
+
+        public enum ReservationTime { Morning = 1, Afternon, Evening, Night }
+
+        [Required]
         public virtual int UserId { get; set; }
+
+        [Required]
         public string UserEmail { get; set; }
         public virtual int RestaurantId { get; set; }
         public int ActivityId { get; set; }
+
+        [Required]
         public int PartySize { get; set; }
 
     }
