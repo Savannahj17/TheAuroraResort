@@ -14,10 +14,9 @@ namespace TheAuroraResort.Data
         public string UserEmail { get; set; }
         
         public Guid UserId { get; set; }
+
         [Required]
         public string UserName { get; set; }
-
-        public IList<string> Reservations { get; set; }
 
         [Key]
         public int ProfileId { get; set; }

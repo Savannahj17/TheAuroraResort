@@ -35,6 +35,23 @@ namespace TheAuroraResort.Services
             }
         }
 
-
+        public IEnuemerable<ReservationListItem> GetReservations()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Reservations
+                    .Where(e => e.UserId == _userId)
+                    .Select(
+                        e =>
+                        new ReservationListItem
+                        {
+                            ReservationId = e.ReservationId,
+                            
+                        }
+                   );
+            }
+        }
     }
 }

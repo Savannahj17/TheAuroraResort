@@ -14,6 +14,8 @@ namespace TheAuroraResort.Data
 
         public enum ReservationTime { Morning = 1, Afternon, Evening, Night }
 
+        public enum ActivityName { WaterPark = 1, ZipLining, WaterSkiing, LiveShow }
+
         public Guid UserId { get; set; }
 
         [Required]
@@ -29,3 +31,4 @@ namespace TheAuroraResort.Data
 
     }
 }
+

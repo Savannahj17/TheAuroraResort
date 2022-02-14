@@ -13,7 +13,7 @@ namespace TheAuroraResort.Models
         public DateTimeOffset CreatedUtc { get; set; }
         public int ReservationId { get; set; }
         public DateTimeOffset ReservationDate { get;}
-        public int ActivityId { get; set; }
-        public string ActivityName { get; set; }
+        public enum ActivityName { get; set; }
+        public int PartySize { get; set; }
     }
 }
