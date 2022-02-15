@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TheAuroraResort.Models;
+using TheAuroraResort.Services;
 
 namespace TheAuroraResort.Controllers
 {
@@ -11,7 +14,63 @@ namespace TheAuroraResort.Controllers
         // GET: Reservation
         public ActionResult Index()
         {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ReservationService(userId);
+            var model = service.GetReservations();
+
             return View();
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(ReservationCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var service = CreateReservationService();
+
+            if (service.CreateReservation(model))
+            {
+                TempData["SaveResult"] = "Your reservation was successfully created.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your reservation could not be created. Please try again.");
+
+            return View(model);
+        }
+
+        private ReservationService CreateReservationService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ReservationService(userId);
+            return service;
+        }
+
+        public ActionResult Details(int ReservationId)
+        {
+            var svc = CreateReservationService();
+            var model = svc.GetReservationById(ReservationId);
+
+            return View(model);
+        }
+
+        public ActionResult Edit(int ReservationId)
+        {
+            var service = CreateReservationService();
+            var detail = service.GetReservationById(ReservationId);
+            var model = new ReservationEdit
+            {
+
+            }
         }
     }
 }

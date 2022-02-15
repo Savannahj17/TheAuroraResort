@@ -76,6 +76,8 @@ namespace TheAuroraResort.Services
             }
         }
 
+        public bool UpdateReservation()
+
         public bool DeleteReservation(int ReservationId)
         {
             using (var ctx = new ApplicationDbContext())

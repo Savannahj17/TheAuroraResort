@@ -60,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReservationCreate.cs" />
     <Compile Include="ReservationDetail.cs" />
+    <Compile Include="ReservationEdit.cs" />
     <Compile Include="ReservationListItem.cs" />
   </ItemGroup>
   <ItemGroup>

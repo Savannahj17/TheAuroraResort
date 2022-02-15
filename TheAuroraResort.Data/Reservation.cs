@@ -12,7 +12,7 @@ namespace TheAuroraResort.Data
         [Key]
         public int ReservationId { get; set; }
 
-        public enum ReservationTime { Morning = 1, Afternon, Evening, Night }
+        //public enum ReservationTime { 8am = 1, 9, 10 }
 
         public enum ActivityName { WaterPark = 1, ZipLining, WaterSkiing, LiveShow }
 
@@ -23,7 +23,14 @@ namespace TheAuroraResort.Data
 
         [Required]
         public string UserEmail { get; set; }
-        public DateTimeOffset ReservationDate { get; set; }
+        public DateTime ReservationDate { get; set; }
+
+        //DateTimePicker
+        //edit models
+        //display name
+        //
+        //Store as one variable
+        //
         public virtual int RestaurantId { get; set; }
         public int ActivityId { get; set; }
 
