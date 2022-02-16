@@ -21,9 +21,9 @@ namespace TheAuroraResort.Data
 
         [Required]
         public string UserEmail { get; set; }
-        public DateTime ReservationDate { get; set; }
+        public DateTime ReservationDateTime { get; set; }
 
-        //DateTimePicker
+        //DateTimePicker//
         //edit models
         //display name
         //Store as one variable

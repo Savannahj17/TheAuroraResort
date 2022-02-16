@@ -12,7 +12,7 @@ namespace TheAuroraResort.Models
         [Display(Name="Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         public int ReservationId { get; set; }
-        public DateTimeOffset ReservationDate { get; set; }
         public int PartySize { get; set; }
+        public DateTime ReservationDateTime { get; set; }
     }
 }

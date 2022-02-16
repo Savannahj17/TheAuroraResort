@@ -24,8 +24,8 @@ namespace TheAuroraResort.Services
                 {
                     UserId = _userId,
                     UserEmail = model.UserEmail,
-                    PartySize = model.PartySize
-
+                    PartySize = model.PartySize,
+                    ReservationDateTime = model.ReservationDateTime
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -50,7 +50,7 @@ namespace TheAuroraResort.Services
                             ReservationId = e.ReservationId,
                             CreatedUtc = e.CreatedUtc,
                             PartySize = e.PartySize,
-                            ReservationDate = e.ReservationDate
+                            ReservationDateTime = e.ReservationDateTime
                         }
                    );
                 return query.ToArray();
@@ -86,8 +86,8 @@ namespace TheAuroraResort.Services
                         .Single(e => e.ReservationId == model.ReservationId && e.UserId == _userId);
 
                 entity.PartySize = model.PartySize;
-                entity.ReservationDate
-
+                entity.ReservationDateTime = model.ReservationDateTime;
+                entity.ModifiedUtc = DateTimeOffset.Now;
 
                 return ctx.SaveChanges() == 1;
             }
