@@ -76,7 +76,22 @@ namespace TheAuroraResort.Services
             }
         }
 
-        public bool UpdateReservation()
+        public bool UpdateReservation(ReservationEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Reservations
+                        .Single(e => e.ReservationId == model.ReservationId && e.UserId == _userId);
+
+                entity.PartySize = model.PartySize;
+                entity.ReservationDate
+
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
         public bool DeleteReservation(int ReservationId)
         {

@@ -10,6 +10,8 @@ namespace TheAuroraResort.Models
     {
         public int ReservationId { get; set; }
 
-        public int MyProperty { get; set; }
+        public int PartySize { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

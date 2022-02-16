@@ -12,8 +12,6 @@ namespace TheAuroraResort.Data
         [Key]
         public int ReservationId { get; set; }
 
-        //public enum ReservationTime { 8am = 1, 9, 10 }
-
         public enum ActivityName { WaterPark = 1, ZipLining, WaterSkiing, LiveShow }
 
         public Guid UserId { get; set; }
@@ -28,9 +26,8 @@ namespace TheAuroraResort.Data
         //DateTimePicker
         //edit models
         //display name
-        //
         //Store as one variable
-        //
+
         public virtual int RestaurantId { get; set; }
         public int ActivityId { get; set; }
 
