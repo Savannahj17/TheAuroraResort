@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TheAuroraResort.Models
 {
@@ -13,6 +14,6 @@ namespace TheAuroraResort.Models
         public DateTimeOffset CreatedUtc { get; set; }
         public int ReservationId { get; set; }
         public int PartySize { get; set; }
-        public DateTime ReservationDateTime { get; set; }
+        public DateTimePicker ReservationDateTime { get; set; }
     }
 }

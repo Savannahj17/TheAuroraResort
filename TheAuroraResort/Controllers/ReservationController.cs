@@ -18,7 +18,7 @@ namespace TheAuroraResort.Controllers
             var service = new ReservationService(userId);
             var model = service.GetReservations();
 
-            return View();
+            return View(model);
         }
 
         public ActionResult Create()
