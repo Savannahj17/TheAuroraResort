@@ -21,8 +21,6 @@ namespace TheAuroraResort.Data
         [Key]
         public int ProfileId { get; set; }
 
-        public bool IsMember { get; set; }
-
         [Display(Name="Hotel")]
         public int HotelId { get; set; }
 

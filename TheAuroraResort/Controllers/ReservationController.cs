@@ -72,8 +72,10 @@ namespace TheAuroraResort.Controllers
                 ReservationId = detail.ReservationId,
                 PartySize = detail.PartySize,
                 ActivityName = detail.ActivityName,
-                ArrivalDateTime = detail.ArrivalDateTime,
-                DepartureDateTime = detail.DepartureDateTime
+                ArrivalDate = detail.ArrivalDate,
+                ArrivalTime = detail.ArrivalTime,
+                DepartureTime = detail.DepartureTime,
+                DepartureDate = detail.DepartureDate
             };
 
             return View(model);

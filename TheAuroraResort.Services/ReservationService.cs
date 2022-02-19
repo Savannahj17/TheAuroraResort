@@ -22,7 +22,7 @@ namespace TheAuroraResort.Services
             var entity =
                 new Reservation()
                 {
-                    UserId = _userId,
+                    UserName = model.UserName,
                     UserEmail = model.UserEmail,
                     PartySize = model.PartySize,
                     ArrivalDateTime = model.ArrivalDateTime,
@@ -92,6 +92,8 @@ namespace TheAuroraResort.Services
                         .Reservations
                         .Single(e => e.ReservationId == model.ReservationId && e.UserId == _userId);
 
+                entity.UserEmail = model.UserEmail;
+                entity.UserName = model.UserName;
                 entity.PartySize = model.PartySize;
                 entity.ActivityName = model.ActivityName;
                 entity.ArrivalDateTime = model.ArrivalDateTime;

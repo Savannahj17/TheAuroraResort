@@ -22,12 +22,15 @@ namespace TheAuroraResort.Data
 
         [Required]
         public string UserEmail { get; set; }
+        public string UserName { get; set; }
+        public string ArrivalDate { get; set; }
+        public string ArrivalTime { get; set; }
+        public string DepartureDate { get; set; }
+        public string DepartureTime { get; set; }
         public DateTime ArrivalDateTime { get; set; }
 
         public DateTime DepartureDateTime { get; set; }
 
-        public virtual int RestaurantId { get; set; }
-        public int ActivityId { get; set; }
 
         [Required]
         public int PartySize { get; set; }
