@@ -23,7 +23,7 @@ namespace TheAuroraResort.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            return View(new ReservationCreate());
         }
 
         [HttpPost]

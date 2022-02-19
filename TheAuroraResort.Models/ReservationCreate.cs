@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,8 @@ namespace TheAuroraResort.Models
         public string UserEmail { get; set; }
         public string UserName { get; set; }
 
-        public DateTimePicker ReservationDateTime { get; set; }
+        [DataType(DataType.DateTime)]
+        public DateTime ReservationDateTime { get; set; }
         public string ActivityName { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace TheAuroraResort.Data
 
         [Required]
         public string UserEmail { get; set; }
-        public DateTimePicker ReservationDateTime { get; set; }
+        public DateTime ReservationDateTime { get; set; }
 
         
 
