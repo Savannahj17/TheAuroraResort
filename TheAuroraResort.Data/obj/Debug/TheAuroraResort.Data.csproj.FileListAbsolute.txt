@@ -49,3 +49,5 @@ C:\SoftwareDevEFA\TheAuroraResort.Data\obj\Debug\TheAuroraResort.Data.csproj.Cor
 C:\SoftwareDevEFA\TheAuroraResort.Data\obj\Debug\TheAuroraResort.Data.csproj.CopyComplete
 C:\SoftwareDevEFA\TheAuroraResort.Data\obj\Debug\TheAuroraResort.Data.dll
 C:\SoftwareDevEFA\TheAuroraResort.Data\obj\Debug\TheAuroraResort.Data.pdb
+C:\SoftwareDevEFA\TheAuroraResort.Data\obj\Debug\TheAuroraResort.Data.Migrations.FirstMigration.resources
+C:\SoftwareDevEFA\TheAuroraResort.Data\obj\Debug\TheAuroraResort.Data.csproj.GenerateResource.cache

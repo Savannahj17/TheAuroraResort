@@ -1,0 +1,16 @@
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\TheAuroraResort.Models.dll.config
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\TheAuroraResort.Models.dll
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\TheAuroraResort.Models.pdb
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\EntityFramework.dll
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\EntityFramework.SqlServer.dll
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\EntityFramework.xml
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\EntityFramework.SqlServer.xml
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\SoftwareDevEFA\TheAuroraResort.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\SoftwareDevEFA\TheAuroraResort.Models\obj\Release\TheAuroraResort.Models.csproj.AssemblyReference.cache
+C:\SoftwareDevEFA\TheAuroraResort.Models\obj\Release\TheAuroraResort.Models.csproj.CoreCompileInputs.cache
+C:\SoftwareDevEFA\TheAuroraResort.Models\obj\Release\TheAuroraResort.Models.csproj.CopyComplete
+C:\SoftwareDevEFA\TheAuroraResort.Models\obj\Release\TheAuroraResort.Models.dll
+C:\SoftwareDevEFA\TheAuroraResort.Models\obj\Release\TheAuroraResort.Models.pdb
