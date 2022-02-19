@@ -15,8 +15,11 @@ namespace TheAuroraResort.Models
         public int PartySize { get; set; }
 
         [DataType(DataType.DateTime)]
-        public DateTime ReservationDateTime { get; set; }
+        public DateTime ArrivalDateTime { get; set; }
 
+        public DateTime DepartureDateTime { get; set; }
+
+        public string ActivityName { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

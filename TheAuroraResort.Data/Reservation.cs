@@ -13,7 +13,7 @@ namespace TheAuroraResort.Data
         [Key]
         public int ReservationId { get; set; }
 
-        public enum ActivityName { WaterPark = 1, ZipLining, WaterSkiing, LiveShow, BookARoom }
+        public string ActivityName { get; set; }
 
         public Guid UserId { get; set; }
 

@@ -25,7 +25,9 @@ namespace TheAuroraResort.Services
                     UserId = _userId,
                     UserEmail = model.UserEmail,
                     PartySize = model.PartySize,
-                    ReservationDateTime = model.ReservationDateTime
+                    ArrivalDateTime = model.ArrivalDateTime,
+                    DepartureDateTime = model.DepartureDateTime,
+                    ActivityName = model.ActivityName
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -50,7 +52,9 @@ namespace TheAuroraResort.Services
                             ReservationId = e.ReservationId,
                             CreatedUtc = e.CreatedUtc,
                             PartySize = e.PartySize,
-                            ReservationDateTime = e.ReservationDateTime
+                            ArrivalDateTime = e.ArrivalDateTime,
+                            DepartureDateTime = e.ArrivalDateTime,
+                            ActivityName = e.ActivityName
                         }
                    );
                 return query.ToArray();
@@ -71,7 +75,10 @@ namespace TheAuroraResort.Services
                         ReservationId = entity.ReservationId,
                         PartySize = entity.PartySize,
                         CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc
+                        ModifiedUtc = entity.ModifiedUtc,
+                        ArrivalDateTime = entity.ArrivalDateTime,
+                        DepartureDateTime= entity.ArrivalDateTime,
+                        ActivityName= entity.ActivityName
                     };
             }
         }
@@ -86,7 +93,9 @@ namespace TheAuroraResort.Services
                         .Single(e => e.ReservationId == model.ReservationId && e.UserId == _userId);
 
                 entity.PartySize = model.PartySize;
-                entity.ReservationDateTime = model.ReservationDateTime;
+                entity.ActivityName = model.ActivityName;
+                entity.ArrivalDateTime = model.ArrivalDateTime;
+                entity.DepartureDateTime = model.DepartureDateTime;
                 entity.ModifiedUtc = DateTimeOffset.Now;
 
                 return ctx.SaveChanges() == 1;
