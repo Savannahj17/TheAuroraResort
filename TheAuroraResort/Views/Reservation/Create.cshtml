@@ -3,44 +3,85 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<!DOCTYPE html>
 
-<h1>Create Your Reservation</h1>
-<div class="bg-agile">
-    <div class="book-reservation">
-        <form action="#" method="post">
-            <div class="form-date">
-                <label><i class="fa fa-user" aria-hidden="true"></i>Name:</label>
-                <input type="text" name="Name" placeholder="Your Name" required="" />
-            </div>
-            <br>
-            <div class="form-date">
-                <label><i class="fa fa-envelope" aria-hidden="true"></i>Email:</label>
-                <input type="email" name="email" placeholder="Your Email" required="" />
-            </div>
-            <br>
-            <div class="form-date">
-                <label><i class="fa fa-calendar" aria-hidden="true"></i>Reservation Date:</label>
-                <input type="datetime-local" name="Text" placeholder="mm/dd/yyyy" value="mm/dd/yyyy" onfocus="this.value = ' ';" required="" />
-            </div>
-            <br>
-            <div class="form-left">
-                <label><i class="fa fa-clock-o" aria-hidden="true"></i>Reservation Date:</label>
-                <input type="datetime-local" name="Text" placeholder="mm/dd/yyyy" value="mm/dd/yyyy" onfocus="this.value = ' ';" required="" />
-            </div>
-            <br>
-            <div class="form-left">
-                <label><i class="fa fa-home" aria-hidden="true"></i>Choose A Room Style:</label>
-                <select class="form-control">
-                    <option>Room</option>
-                    <option>Modern</option>
-                    <option>Luxury</option>
-                    <option>Extended Stay</option>
-                    <option>Loft</option>
-                </select>
-            </div>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Create</title>
+</head>
+<body>
+    <h1>Create A Reservation</h1>
+    <div class="bg-agile">
+        <div class="book-reservation">
+            @using (Html.BeginForm("Create", "Reservation", FormMethod.Post))
+            {
+                 @Html.AntiForgeryToken()
+            }
+            <form action="#" method="post">
+                <div class="form-date-w3-agilities">
+                    <label><i class="fa fa-user" aria-hidden="true">Name:</i></label>
+                    <input type="text" name="name" placeholder="Your Name" required="" />
+                </div>
 
-        </form>
+                <div class="form-date-w3-agilities">
+                    <label><i class="fa fa-envelope" aria-hidden="true">Email:</i></label>
+                    <input type="email" name="email" placeholder="Your Email" required="" />
+                </div>
+
+                <div class="form-date-w3-agilities">
+                    <label><i class="fa fa-calendar" aria-hidden="true">Arrival Date</i></label>
+                    <input id="" name="text" type="text" value="mm/dd/yyyy" onfocus="this.value ='' ;" onblur="if (this.value == ' ') {this.value = 'mm/dd/yyyy';}" />
+                </div>
+
+                <div class="form-date-w3layouts">
+                    <label><i class="fa fa-clock-o" aria-hidden="true">Time:</i></label>
+                    <input type="text" name="Text" class="timepicker form-control" value="Hrs:Min" />
+                </div>
+
+                <div class="form-date-w3-agilities">
+                    <label><i class="fa fa-calendar" aria-hidden="true">Departure Date</i></label>
+                    <input id="" name="text" type="text" value="mm/dd/yyyy" onfocus="this.value ='' ;" onblur="if (this.value == ' ') {this.value = 'mm/dd/yyyy';}" />
+                </div>
+
+                <div class="form-date-w3layouts">
+                    <label><i class="fa fa-clock-o" aria-hidden="true">Time:</i></label>
+                    <input type="text" name="Text" class="timepicker form-control" value="Hrs:Min" />
+                </div>
+
+                <div class="form-left-agileits-w3layouts bottom-w3ls">
+                    <label><i class="fa fa-home" aria-hidden="true"></i>Choose A Room:</label>
+                    <select class="form-control">
+                        <option>Modern</option>
+                        <option>Luxury</option>
+                        <option>Extended Stay</option>
+                        <option>Loft</option>
+                    </select>
+                </div>
+
+                <div class="form-left-agileits-w3layouts">
+                    <label><i class="fa fa-user" aria-hidden="true"></i>Party Size</label>
+                    <select class="form-control">
+                        <option># of People</option>
+                        <option>1 Person</option>
+                        <option>2 People</option>
+                        <option>3 People</option>
+                        <option>4 People</option>
+                        <option>5 People</option>
+                        <option>6 People</option>
+                    </select>
+                </div>
+                <div class="clear"> </div>
+                <div class="make">
+                    <input type="submit" value="Make Reservation" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
+
+
+
+
+</body>
+</html>
