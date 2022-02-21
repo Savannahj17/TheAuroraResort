@@ -12,8 +12,8 @@
     @Scripts.Render("~/bundles/jqueryui")
 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<body style="background-image: url(https://media.istockphoto.com/photos/aurora-borealis-on-the-lofoten-islands-norway-green-northern-lights-picture-id1185457609?k=20&m=1185457609&s=612x612&w=0&h=3uoioN0Vp_-Yn6Tji8-SeyfBUrtDHTbhDgg_3nFwBM0=)">>
+    <div class="navbar navbar-light navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,13 +21,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">S
+                @Html.ActionLink("The Aurora Resort", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Create", "Create","Reservation")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
